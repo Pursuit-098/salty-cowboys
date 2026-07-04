@@ -576,9 +576,9 @@ const T = {
       insta: "A photo-focused ride through village, beach and rice fields near Kedungu — grooms guide you to the most scenic spots, best at sunset. Same inclusions as the standard ride.",
       dressage: "Private lessons for all levels — learn dressage or polish up your skills.",
       funpacked: "A bit of everything: 2 riding lessons, a bareback ride, plus join up, obstacle work, lunging, free jumping, grooming master class and rice-field + beach rides.",
-      photo_beach: "Static shoot for fashion, pre-wedding or private sessions. One groomed horse plus staff, along a 900m route through the rice fields. Time starts when leaving the stables. To note: we request no swim-ware shoots are taken, out of respect for the local culture - thank you for understanding!",
+      photo_beach: "Static shoot for fashion, pre-wedding or private sessions. One groomed horse plus staff, along a 900m route through the rice fields. Time starts when leaving the stables. To note: we request no swimwear shoots are taken, out of respect for the local culture - thank you for understanding!",
       photo_stable: "Rustic Western-style stable backdrop for fashion, pre-wedding or personal shoots. One groomed horse plus team assistance.",
-      photo_paddock: "Natural, cottage-vibe backdrop with grazing horses and wooden houses. Location only — photographer not included. Entering paddocks, touching horses and photos inside the houses aren't permitted.",
+      photo_paddock: "Natural, cottage-vibe backdrop with grazing horses and wooden houses. Location only — photographer included at extra cost. Entering paddocks, touching horses and photos inside the houses aren't permitted.",
       whisper: "Learn to 'speak horse' through body awareness, body language and energy. Includes 2 hrs grooming/horse-care master class and mucking out. Required before regular riding lessons with Simone.",
       joinup: "An introduction to natural horsemanship — learn to 'join up' a horse so it chooses to stay with you. Hands-on, no riding.",
       lunge: "A hands-on ground session in the arena: guide the horse in a circle, read its body language and build clear communication. No riding.",
@@ -700,7 +700,7 @@ const T = {
       funpacked: "Sedikit dari segalanya: 2 pelajaran berkuda, 1 tunggang tanpa pelana, plus join up, latihan rintangan, lunging, lompat bebas, master class grooming, serta berkuda di sawah + pantai.",
       photo_beach: "Sesi foto statis untuk fashion, prewedding, atau pribadi. Termasuk 1 kuda yang telah dirawat plus bantuan staf, menyusuri rute 900m melewati sawah. Waktu dihitung sejak meninggalkan kandang. Catatan: kami mohon tidak ada pemotretan berpakaian renang, sebagai penghormatan terhadap budaya setempat — terima kasih atas pengertiannya!",
       photo_stable: "Latar kandang bergaya Western yang rustic untuk fashion, prewedding, atau sesi pribadi. Termasuk 1 kuda yang telah dirawat plus bantuan tim.",
-      photo_paddock: "Latar alami bernuansa pondok dengan kuda yang merumput dan rumah kayu. Hanya lokasi — fotografer tidak termasuk. Dilarang memasuki padang, menyentuh kuda, dan berfoto di dalam rumah.",
+      photo_paddock: "Latar alami bernuansa pondok dengan kuda yang merumput dan rumah kayu. Hanya lokasi — fotografer tersedia dengan biaya tambahan. Dilarang memasuki padang, menyentuh kuda, dan berfoto di dalam rumah.",
       whisper: "Belajar 'berbicara dengan kuda' melalui kesadaran tubuh, bahasa tubuh, dan energi. Termasuk 2 jam master class grooming/perawatan kuda dan membersihkan kandang. Wajib sebelum pelajaran berkuda reguler bersama Simone.",
       joinup: "Pengantar natural horsemanship — belajar 'join up' agar kuda memilih untuk tetap bersama Anda. Praktik langsung, tanpa berkuda.",
       lunge: "Sesi darat langsung di arena: mengarahkan kuda berputar, membaca bahasa tubuhnya, dan membangun komunikasi yang jelas. Tanpa berkuda.",
@@ -822,7 +822,7 @@ const T = {
       funpacked: "Понемногу обо всём: 2 урока верховой езды, поездка без седла, плюс join up, работа с препятствиями, корда, свободные прыжки, мастер-класс по грумингу и прогулки к рисовым полям и пляжу.",
       photo_beach: "Статичная съёмка для fashion, love story или личных сессий. Включает 1 ухоженную лошадь и помощь персонала, маршрут 900 м через рисовые поля. Время отсчитывается с момента выхода из конюшни. Обратите внимание: мы просим не проводить съёмки в купальниках — из уважения к местной культуре, спасибо за понимание!",
       photo_stable: "Рустикальный фон конюшни в western-стиле для fashion, love story или личных съёмок. Включает 1 ухоженную лошадь и помощь команды.",
-      photo_paddock: "Естественный фон в стиле коттеджа с пасущимися лошадьми и деревянными домами. Только локация — фотограф не входит. Заходить в загоны, трогать лошадей и снимать внутри домов нельзя.",
+      photo_paddock: "Естественный фон в стиле коттеджа с пасущимися лошадьми и деревянными домами. Только локация — фотограф за дополнительную плату. Заходить в загоны, трогать лошадей и снимать внутри домов нельзя.",
       whisper: "Научитесь «говорить по-лошадиному» через осознание тела, язык тела и энергию. Включает 2 часа мастер-класса по грумингу/уходу и уборку. Обязательно перед обычными уроками верховой езды с Симоне.",
       joinup: "Введение в natural horsemanship — научитесь делать join up, чтобы лошадь сама выбирала оставаться с вами. Практика, без верховой езды.",
       lunge: "Практическое наземное занятие на арене: ведите лошадь по кругу, читайте язык её тела и выстраивайте чёткое общение. Без верховой езды.",
@@ -862,6 +862,55 @@ html, body { background: #0e0b08; }
   background: var(--cream);
   position: relative;
   overflow: hidden;
+}
+
+/* On tablet: present the app as a centered, framed card. */
+@media (min-width: 620px) and (max-width: 899px) {
+  .app {
+    max-width: 460px;
+    margin: 44px auto;
+    min-height: auto;
+    border-radius: 26px;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* On desktop: two-pane layout — dark branding panel on the left,
+   booking content filling the rest of the width on the right. */
+@media (min-width: 900px) {
+  html, body { background: var(--earth); }
+  .app {
+    max-width: none;
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .side {
+    width: 400px;
+    flex-shrink: 0;
+    background: var(--earth);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-self: flex-start;
+    overflow: hidden;
+  }
+  .side .hero { padding: 40px 40px 28px; }
+  .side .steps { padding: 20px 40px; }
+  .main {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    background: var(--cream);
+    padding: 24px 0 60px;
+  }
+  .main > * { max-width: 660px; margin-left: auto; margin-right: auto; }
+  .main > .fu:not(.body):not(.confirm-screen) { padding-left: 24px; padding-right: 24px; box-sizing: border-box; }
 }
 
 /* ── HERO HEADER ── */
@@ -1758,8 +1807,6 @@ function App() {
     });
     setSentMessage(message);
     setCopied(false);
-    setSentMessage(message);
-    setCopied(false);
     openWhatsApp(message);
     setScreen("confirm");
   }
@@ -1776,6 +1823,8 @@ function App() {
   }
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, css), /*#__PURE__*/React.createElement("div", {
     className: "app"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "side"
   }, /*#__PURE__*/React.createElement("div", {
     className: "hero"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1798,7 +1847,9 @@ function App() {
     className: "step-dot " + (step > s ? "done" : step === s ? "active" : "")
   }, step > s ? "✓" : s), i < 2 && /*#__PURE__*/React.createElement("div", {
     className: "step-line " + (step > s ? "done" : "")
-  })))), screen === "activity" && /*#__PURE__*/React.createElement("div", {
+  }))))), /*#__PURE__*/React.createElement("div", {
+    className: "main"
+  }, screen === "activity" && /*#__PURE__*/React.createElement("div", {
     className: "body fu"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "section-title"
@@ -2175,7 +2226,7 @@ function App() {
   }, copied ? t.copied : "📋 " + t.copyBtn)), /*#__PURE__*/React.createElement("button", {
     className: "cta",
     onClick: resetAll
-  }, t.another))));
+  }, t.another)))));
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(/*#__PURE__*/React.createElement(App, null));
